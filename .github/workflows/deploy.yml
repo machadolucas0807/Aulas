@@ -1,0 +1,33 @@
+name: Publicação Automática
+
+on:
+  push:
+    branches:
+      - main  # Executa o workflow quando há push na branch 'main'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checar código
+      uses: actions/checkout@v3
+
+    - name: Configurar Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Instalar dependências
+      run: npm install
+
+    - name: Construir o projeto
+      run: npm run build
+
+    - name: Fazer deploy
+      run: |
+        git config --global user.name "Seu Nome"
+        git config --global user.email "seuemail@exemplo.com"
+        git add .
+        git commit -m "Deploy automático"
+        git push
