@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperlinks</title>
+</head>
+
+<body>
+    <h1>Hyperlinks</h1>
+    <hr>
+
+    <h2>1. Links</h2>
+    <p>Siga meu <a href="https://www.instagram.com/machadolucas0807/" hreflang="pt-BR">Instagram</a>.</p>
+
+    <h2>2. Controlando onde o site abrirá</h2>
+    <ul>
+        <li><code>target="_blank"</code>: vai abrir o link em uma nova janela em branco.</li>
+        <li><code>target="_self"</code>: vai abrir o link na mesma janela (padrão).</li>
+        <li><code>target="_parent"</code>: similar ao uso do <code>_top</code> em uma referência à janela mãe.</li>
+        <li><code>target="_top"</code>: vai desfazer todos os frames e abrir o destino no navegador completo.</li>
+        <li>nome-do-frame: caso esteja usando frames, indica o nome da janela a abrir.</li>
+    </ul>
+
+    <p>Exemplo:</p>
+    <ul>
+        <li>Meu <a href="https://www.instagram.com/machadolucas0807/" target="_blank" hreflang="pt-BR">Instagram</a>
+            (<code>target="_blank"</code>).</li>
+        <li>Meu <a href="https://www.instagram.com/machadolucas0807/" target="_self" hreflang="pt-BR">Instagram</a>
+            (<code>target="_self"</code>).</li>
+        <li>Meu <a href="https://www.instagram.com/machadolucas0807/" target="_parent" hreflang="pt-BR">Instagram</a>
+            (<code>target="_parent"</code>).</li>
+        <li>Meu <a href="https://www.instagram.com/machadolucas0807/" target="_top" hreflang="pt-BR">Instagram</a>
+            (<code>target="_top"</code>).</li>
+        <li>Meu <a href="https://www.instagram.com/machadolucas0807/" target="janela" hreflang="pt-BR">Instagram</a>
+            (<code>target="janela"</code>).</li>
+    </ul>
+
+    <h2>3. Atributo rel</h2>
+    <p>O atributo <code>rel</code> é usado para especificar a relação entre o documento atual e o link. Alguns valores
+        comuns incluem:</p>
+    <ul>
+        <li>next: indica que o link é para a próxima parte do documento atual;</li>
+        <li>prev: indica que o link é para a parte anterior do documento atual;</li>
+        <li>nofollow: indica que o link não deve ser seguido pelos motores de busca;</li>
+        <li>author: indica que é um link para o site do autor do artigo atual;</li>
+        <li>external: indica que é um link para outro site que não faz parte do site atual.</li>
+    </ul>
+
+    <p>Exemplo:</p>
+    <ul>
+        <li>Meu <a href="https://www.instagram.com/machadolucas0807/" target="_blank" rel="external"
+                hreflang="pt-BR">Instagram</a> (<code>rel="external"</code>).</li>
+        <li>Meu <a href="https://www.instagram.com/machadolucas0807/" target="_blank" rel="nofollow"
+                hreflang="pt-BR">Instagram</a> (<code>rel="nofollow"</code>).</li>
+        <li>Meu <a href="https://www.instagram.com/machadolucas0807/" target="_blank" rel="author"
+                hreflang="pt-BR">Instagram</a> (<code>rel="author"</code>).</li>
+        <li>Meu <a href="https://www.instagram.com/machadolucas0807/" target="_blank" rel="prev"
+                hreflang="pt-BR">Instagram</a> (<code>rel="prev"</code>).</li>
+        <li>Meu <a href="https://www.instagram.com/machadolucas0807/" target="_blank" rel="next"
+                hreflang="pt-BR">Instagram</a> (<code>rel="next"</code>).</li>
+    </ul>
+
+    <h2>4. Downloads</h2>
+    <p>
+        Para fazer o download de um arquivo, use o atributo <code>download</code> no link. Exemplo:
+    </p>
+    <p>
+        <a href="10 - Ligações em toda parte.pdf" download="10 - Ligações em toda parte.pdf" type="application/pdf">Baixe
+            aqui o PDF.</a>
+    </p>
+</body>
+
+</html>
