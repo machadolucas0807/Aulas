@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Dinamica, Audio e Video</title>
+</head>
+<body>
+    <h1>Imagem Dinamica, Audio e Video</h1>
+    <hr>
+
+    <h2>Imagem Dinamica</h2>
+            <picture>
+            <!-- Imagem para telas pequenas -->
+            <source media="(max-width: 750px)" srcset="foto-p.jpg" type="image/jpeg">
+            
+            <!-- Imagem para telas médias -->
+            <source media="(max-width: 1050px)" srcset="foto-m.jpg" type="image/jpeg">
+            
+            <!-- Imagem padrão para telas maiores -->
+            <img src="foto-g.jpg" alt="Imagem de teste">
+        </picture> 
+    
+</body>
+</html>
