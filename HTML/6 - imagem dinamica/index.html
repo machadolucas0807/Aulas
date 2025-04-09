@@ -10,16 +10,21 @@
     <hr>
 
     <h2>Imagem Dinamica</h2>
-            <picture>
-            <!-- Imagem para telas pequenas -->
-            <source media="(max-width: 750px)" srcset="foto-p.jpg" type="image/jpeg">
-            
-            <!-- Imagem para telas médias -->
-            <source media="(max-width: 1050px)" srcset="foto-m.jpg" type="image/jpeg">
-            
-            <!-- Imagem padrão para telas maiores -->
-            <img src="foto-g.jpg" alt="Imagem de teste"> 
-        </picture> 
-    
+    <p>
+        O elemento <code>&lt;picture&gt;</code> permite que você forneça diferentes imagens para diferentes tamanhos de tela. 
+        Isso é útil para otimizar o carregamento de imagens em dispositivos móveis e desktops.
+    </p>
+    <p>
+        O elemento <code>&lt;source&gt;</code> dentro do <code>&lt;picture&gt;</code> define as imagens que serão carregadas 
+        com base nas condições especificadas no atributo <code>media</code>.
+    </p>        
+    <picture>
+        <source media="(max-width: 717px)" srcset="Fotos/foto-p.jpg" type="image/jpeg">
+        <!--Imagem média, e foi adicionado um espaçamento de 50px. -->
+        <source media="(max-width: 1050px)" srcset="Fotos/foto-m.jpg" type="image/jpeg">
+        <!-- Imagem padrão para telas maiores -->
+        <img src="Fotos/foto-g.jpg" alt="Imagem de teste">
+        <!-- As imagens devem ser fornecidas em ordem crescente de tamanho, pois o navegador seleciona a primeira condição que atende ao critério especificado no atributo media. -->
+    </picture> 
 </body>
 </html>
