@@ -20,11 +20,8 @@
     </p>        
     <picture>
         <source media="(max-width: 717px)" srcset="Fotos/foto-p.jpg" type="image/jpeg">
-        <!-- Imagem média, com espaçamento de 50px -->
         <source media="(max-width: 1050px)" srcset="Fotos/foto-m.jpg" type="image/jpeg">
-        <!-- Imagem padrão para telas maiores -->
         <img src="Fotos/foto-g.jpg" alt="Imagem de teste">
-        <!-- As imagens devem ser fornecidas em ordem crescente de tamanho, pois o navegador seleciona a primeira condição que atende ao critério especificado no atributo media. -->
     </picture> 
 
     <h2>Reprodução de Áudio</h2>
@@ -33,18 +30,34 @@
         Você pode especificar controles, como play, pause e volume, usando o atributo <code>controls</code>.
     </p>
     <audio controls preload="metadata"> 
-        <!-- O atributo controls adiciona controles de reprodução ao áudio. -->
-        <!-- O atributo preload indica que o áudio deve ser carregado quando a página for carregada. -->
-        <!-- O atributo metadata indica que apenas os metadados do áudio devem ser carregados inicialmente. -->
-        
         <source src="Audio/audio-mp3.mp3" type="audio/mpeg">
         <source src="Audio/audio-ogg.ogg" type="audio/ogg">
         <source src="Audio/audio-wav.wav" type="audio/wav">
-        <!-- Os arquivos de áudio precisam estar em ordem crescente, ou seja, o primeiro arquivo a ser lido é o mp3, depois o ogg e por último o wav. -->
-        
         <p>Seu navegador não suporta o elemento de áudio. <a href="Audio/audio-mp3.mp3">Clique aqui</a> para baixar o áudio referido.</p>
-        <!-- O elemento <p> fornece uma mensagem alternativa caso o navegador não suporte o elemento de áudio. --> 
     </audio>
 
+    <h2>Reprodução de Vídeo</h2>
+    <p>
+        O elemento <code>&lt;video&gt;</code> permite a reprodução de arquivos de vídeo diretamente na página. 
+        Você pode especificar controles, como play, pause e volume, usando o atributo <code>controls</code>.
+    </p>
+    <h3>Vídeo Local</h3>
+    <video controls width="310" height="550" preload="metadata">
+        <source src="Videos/video-mp4.mp4" type="video/mp4">
+        <source src="Videos/video-ogg.ogg" type="video/ogg">
+        <source src="Videos/video-webm.webm" type="video/webm">
+        <p>Seu navegador não suporta o elemento de vídeo. <a href="Videos/video-mp4.mp4">Clique aqui</a> para baixar o vídeo referido.</p>
+    </video>
+
+    <h3>Vídeo Incorporado</h3>
+    <p>
+        O elemento <code>&lt;iframe&gt;</code> permite incorporar vídeos de outras plataformas, como o YouTube. 
+        Você pode especificar a largura e a altura do vídeo usando os atributos <code>width</code> e <code>height</code>.
+    </p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y?si=GdWc0TordEIhz_KJ"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
 </body>
 </html>
