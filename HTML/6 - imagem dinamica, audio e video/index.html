@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagem Dinamica, Audio e Video</title>
+    <title>Imagem Dinâmica, Áudio e Vídeo</title>
 </head>
 <body>
-    <h1>Imagem Dinamica, Audio e Video</h1>
+    <h1>Imagem Dinâmica, Áudio e Vídeo</h1>
     <hr>
 
-    <h2>Imagem Dinamica</h2>
+    <h2>Imagem Dinâmica</h2>
     <p>
         O elemento <code>&lt;picture&gt;</code> permite que você forneça diferentes imagens para diferentes tamanhos de tela. 
         Isso é útil para otimizar o carregamento de imagens em dispositivos móveis e desktops.
@@ -20,7 +20,7 @@
     </p>        
     <picture>
         <source media="(max-width: 717px)" srcset="Fotos/foto-p.jpg" type="image/jpeg">
-        <!--Imagem média, e foi adicionado um espaçamento de 50px. -->
+        <!-- Imagem média, com espaçamento de 50px -->
         <source media="(max-width: 1050px)" srcset="Fotos/foto-m.jpg" type="image/jpeg">
         <!-- Imagem padrão para telas maiores -->
         <img src="Fotos/foto-g.jpg" alt="Imagem de teste">
@@ -32,7 +32,19 @@
         O elemento <code>&lt;audio&gt;</code> permite a reprodução de arquivos de áudio diretamente na página. 
         Você pode especificar controles, como play, pause e volume, usando o atributo <code>controls</code>.
     </p>
-    <audio src="Audio/Moon Vision - Chris Haugen.mp3" controls></audio>
+    <audio controls preload="metadata"> 
+        <!-- O atributo controls adiciona controles de reprodução ao áudio. -->
+        <!-- O atributo preload indica que o áudio deve ser carregado quando a página for carregada. -->
+        <!-- O atributo metadata indica que apenas os metadados do áudio devem ser carregados inicialmente. -->
+        
+        <source src="Audio/audio-mp3.mp3" type="audio/mpeg">
+        <source src="Audio/audio-ogg.ogg" type="audio/ogg">
+        <source src="Audio/audio-wav.wav" type="audio/wav">
+        <!-- Os arquivos de áudio precisam estar em ordem crescente, ou seja, o primeiro arquivo a ser lido é o mp3, depois o ogg e por último o wav. -->
+        
+        <p>Seu navegador não suporta o elemento de áudio. <a href="Audio/audio-mp3.mp3">Clique aqui</a> para baixar o áudio referido.</p>
+        <!-- O elemento <p> fornece uma mensagem alternativa caso o navegador não suporte o elemento de áudio. --> 
+    </audio>
 
 </body>
 </html>
